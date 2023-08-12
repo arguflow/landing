@@ -9,7 +9,7 @@ export const Hero = () => {
 
   return (
     <section
-      className="w-screen  flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
+      className="w-screen flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
       id="home"
     >
       <div className="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
@@ -18,8 +18,8 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-customSecondary text-sm sm:text-base  mb-6 sm:mt-32 mt-16  font-bold">
-            Discover new data flow
+          <div className="text-customSecondary px-2 text-sm sm:text-base mb-6 sm:mt-32 mt-16 font-bold">
+            AI semantic search & no-hallucination LLM chat infra
           </div>
         </motion.div>
         <motion.div
@@ -27,12 +27,12 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-8 md:px-20 lg:px-4">
-            <span className="inline md:hidden">Analytics</span>
-            <span className="hidden md:inline">Analytic tools suite</span>
+          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-white px-8 sm:px-8 md:px-20 lg:px-4">
+            <span className="inline md:hidden">AI infra</span>
+            <span className="hidden md:inline">AI infrastructure suite</span>
           </div>
           <div className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24">
-            for developers
+            for businesses
           </div>
         </motion.div>
         <motion.div
@@ -40,9 +40,19 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-            Experience seamless business integrations and powerful insights with
-            our cutting-edge analytic tools.
+          <div className="text-customGrayText flex flex-col space-y-4 text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
+            <span>
+              Bring your data, we'll handle the rest. We create embeddings for
+              you, store them in a vector db, and coordinate meatadata joins
+              with a transactional db.
+            </span>{" "}
+            <span>
+              Includes <span className="font-semibold"> best in class</span> API
+              for data servicing, along with white-label UI's for{" "}
+              <span className="font-semibold">semantic/full-text search </span>
+              and <span className="font-semibold">source-cited</span> llm-chat.
+              Bring your models or use our top-ranked single-tenant defaults.
+            </span>
           </div>
         </motion.div>
         <motion.div
@@ -51,18 +61,18 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
         >
           <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
-            <div
+            <a
               className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
-              onClick={() => setIsModalOpen(true)}
+              href="https://arguflow.ai/meet"
             >
               Get Started
-            </div>
-            <div
+            </a>
+            <a
               className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
-              onClick={() => setIsModalOpen(true)}
+              href="https://vault.arguflow.ai/"
             >
-              Live demo
-            </div>
+              Live DebateSum demo
+            </a>
           </div>
         </motion.div>
         <motion.div
@@ -70,12 +80,14 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen flex justify-center ">
-            <img
-              src={dashboard}
-              alt="123"
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-            />
+          <div className="relative w-screen mb-32 flex justify-center ">
+            <iframe
+              className="w-4/5 aspect-video 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              src="https://www.youtube.com/embed/9I3dPXMAaxY"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
           </div>
         </motion.div>
         <div className="relative w-screen flex justify-center ">

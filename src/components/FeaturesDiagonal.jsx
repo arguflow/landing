@@ -8,7 +8,7 @@ export const FeaturesDiagonal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="lg:mb-16 w-full flex flex-col justify-center items-center bg-customDarkBg1">
+    <section className="lg:mb-16 w-screen flex flex-col justify-center items-center bg-customDarkBg1">
       <div className="custom-shape-divider-bottom-1665696614">
         <svg
           data-name="Layer 1"
@@ -40,14 +40,15 @@ export const FeaturesDiagonal = () => {
             <p className="mb-16 text-customGrayText leading-loose">
               Our platform enables you to launch your data-driven projects with
               ease. Boost productivity and achieve better results. Empower your
-              decision-making with advanced analytics
+              teams with semantic search and LLM-chat that cites your data
+              sources.
             </p>
-            <div
-              className="w-[210px] h-12 custom-button-colored mr-10 "
-              onClick={() => setIsModalOpen(true)}
+            <a
+              className="max-w-[100vw] w-[210px] h-12 custom-button-colored [w-300px]:mr-10 "
+              href="https://arguflow.ai/meet"
             >
               Get Started
-            </div>
+            </a>
           </div>
           <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
             <img
