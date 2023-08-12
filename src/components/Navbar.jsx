@@ -7,6 +7,8 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 const navbarLinks = [
   { label: "Home", href: "#home", ariaLabel: "Home" },
   { label: "Product Offering", href: "#features", ariaLabel: "Product Offering" },
+  { label: "Documentation", href: "https://docs.arguflow.ai", ariaLabel: "Documentation" },
+  { label: "Blog", href: "https://blog.arguflow.ai", ariaLabel: "Blog" },
 ];
 
 export const Navbar = () => {
