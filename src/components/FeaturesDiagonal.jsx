@@ -47,7 +47,7 @@ export const FeaturesDiagonal = () => {
               className="max-w-[100vw] w-[210px] h-12 custom-button-colored [w-300px]:mr-10 "
               href="https://arguflow.ai/meet"
             >
-              Get Started
+              Book a Meeting
             </a>
           </div>
           <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">

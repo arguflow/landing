@@ -43,12 +43,12 @@ export const Hero = () => {
           <div className="text-customGrayText flex flex-col space-y-4 text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
             <span>
               Bring your data, we'll handle the rest. We create embeddings for
-              you, store them in a vector db, and coordinate meatadata joins
+              you, store them in a vector db, and coordinate metadata joins
               with a transactional db.
             </span>{" "}
             <span>
               Includes <span className="font-semibold"> best in class</span> API
-              for data servicing, along with white-label UI's for{" "}
+              for data servicing and white-label UI's for{" "}
               <span className="font-semibold">semantic/full-text search </span>
               and <span className="font-semibold">source-cited</span> llm-chat.
               Bring your models or use our top-ranked single-tenant defaults.
@@ -65,7 +65,7 @@ export const Hero = () => {
               className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
               href="https://arguflow.ai/meet"
             >
-              Get Started
+              Book a Meeting
             </a>
             <a
               className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"

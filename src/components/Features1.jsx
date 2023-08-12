@@ -35,8 +35,8 @@ export const Features1 = () => {
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
                   <span>
-                    Data or Document to embedding pipeline with default or
-                    custom segmentation
+                    Data/Document to embedding pipeline with default or custom
+                    segmentation
                   </span>
                 </li>
                 <li className="mb-4 flex">
@@ -49,8 +49,8 @@ export const Features1 = () => {
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
                   <span>
-                    White-label llm-chat UI that cites your data for no
-                    hallucination natural language assistance
+                    White-label llm-chat UI that cites your data for
+                    no-hallucination natural language assistance
                   </span>
                 </li>
               </ul>
