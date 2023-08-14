@@ -43,8 +43,8 @@ export const Hero = () => {
           <div className="text-customGrayText flex flex-col space-y-4 text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
             <span>
               Bring your data, we'll handle the rest. We create embeddings for
-              you, store them in a vector db, and coordinate metadata joins
-              with a transactional db.
+              you, store them in a vector db, and coordinate metadata joins with
+              a transactional db.
             </span>{" "}
             <span>
               Includes <span className="font-semibold"> best in class</span> API
@@ -83,7 +83,7 @@ export const Hero = () => {
           <div className="relative w-screen mb-32 flex justify-center ">
             <iframe
               className="w-4/5 aspect-video 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-              src="https://www.youtube.com/embed/9I3dPXMAaxY"
+              src="https://www.youtube.com/embed/fcYem3u7Cvo"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
