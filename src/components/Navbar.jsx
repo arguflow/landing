@@ -6,8 +6,16 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const navbarLinks = [
   { label: "Home", href: "#home", ariaLabel: "Home" },
-  { label: "Product Offering", href: "#features", ariaLabel: "Product Offering" },
-  { label: "Documentation", href: "https://docs.arguflow.ai", ariaLabel: "Documentation" },
+  {
+    label: "Product Offering",
+    href: "#features",
+    ariaLabel: "Product Offering",
+  },
+  {
+    label: "Documentation",
+    href: "https://docs.arguflow.ai",
+    ariaLabel: "Documentation",
+  },
   { label: "Blog", href: "https://blog.arguflow.ai", ariaLabel: "Blog" },
 ];
 
@@ -17,7 +25,7 @@ export const Navbar = () => {
   return (
     <>
       <div
-        className="astro-3EF6KSR2 card font-semibold py-3"
+        className="card font-semibold py-3"
         style={{
           width: "100%",
           color: "#00f",
@@ -31,16 +39,16 @@ export const Navbar = () => {
           position: "relative",
         }}
       >
-        <div className="astro-3EF6KSR2 p-2" style={{ color: "#fff" }}>
+        <div className="p-2" style={{ color: "#fff" }}>
           Check out{" "}
           <a
-            className="astro-3EF6KSR2 underline font-bold"
-            href="https://vault.arguflow.ai"
+            className="underline font-bold"
+            href="https://chat.arguflow.ai"
             style={{ color: "#d3ff19" }}
           >
-            Vault
+            Chat
           </a>
-          : a PoC of Arguflow's new AI infrastructure
+          : a demo of Arguflow's new LLM-chat infrastructure for debates
         </div>
       </div>
       <nav className="w-full max-w-[100vw] h-20 flex flex-col justify-center items-center sticky top-0 bg-customDarkBg1 lg:bg-customDarkBgTransparent z-40 lg:backdrop-blur-xl">
