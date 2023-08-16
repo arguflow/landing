@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-import feature1 from "../assets/images/feature1.jpg";
-import feature2 from "../assets/images/feature2.jpg";
-import feature3 from "../assets/images/feature3.jpg";
-import feature4 from "../assets/images/feature4.jpg";
+import feature1 from "../assets/images/blue-inverse-bar-chart.png";
+import feature2 from "../assets/images/yellow-wave.png";
+import feature3 from "../assets/images/yellow-circles.png";
+import feature4 from "../assets/images/blue-boxes.png";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 export const Features1 = () => {
@@ -24,7 +24,7 @@ export const Features1 = () => {
               <span className="custom-block-subtitle">Embrace Innovation</span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
                 The best infrastructure for your semantic search and
-                no-hallucination LLM-chat
+                no-hallucination LLM-chat needs
               </h2>
               <p className="mb-10 text-customGrayText leading-loose">
                 Discover a new level of performance and value with our

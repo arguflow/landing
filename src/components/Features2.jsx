@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-import feature5 from "../assets/images/feature5.jpg";
-import feature6 from "../assets/images/feature6.jpg";
+import feature5 from "../assets/images/tiered-square.png";
+import feature6 from "../assets/images/blue-line-chart.png";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 export const Features2 = () => (
@@ -19,14 +19,14 @@ export const Features2 = () => (
               <img
                 src={feature5}
                 alt="f1"
-                className="rounded-xl  custom-border-gray"
+                className="rounded-xl w-[250px] aspect-square custom-border-gray"
               />
             </div>
-            <div className="py-3 md:pl-20 lg:pl-12 md:pr-2 rounded ">
+            <div className="py-3 pl-56 md:pl-64 rounded ">
               <img
                 src={feature6}
                 alt="f2"
-                className="rounded-xl  custom-border-gray"
+                className="rounded-xl w-[250px] custom-border-gray"
               />
             </div>
           </div>

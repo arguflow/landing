@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
-import dashboard from "../assets/images/dashboard.jpg";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +17,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-customSecondary px-2 text-sm sm:text-base mb-6 sm:mt-32 mt-16 font-bold">
+          <div className="text-customSecondary px-2 text-sm sm:text-base mb-6 mt-8 font-bold">
             AI semantic search & no-hallucination LLM chat infra
           </div>
         </motion.div>
