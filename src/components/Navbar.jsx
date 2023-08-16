@@ -48,7 +48,8 @@ export const Navbar = () => {
           >
             Chat
           </a>
-          : a demo of Arguflow's new LLM-chat infrastructure for debates
+          : a demo of Arguflow's new LLM-chat infrastructure for a debate
+          use-case
         </div>
       </div>
       <nav className="w-full max-w-[100vw] h-20 flex flex-col justify-center items-center sticky top-0 bg-customDarkBg1 lg:bg-customDarkBgTransparent z-40 lg:backdrop-blur-xl">
