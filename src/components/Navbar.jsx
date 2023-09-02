@@ -17,11 +17,6 @@ const navbarLinks = [
     ariaLabel: "Arguflow Chat",
   },
   {
-    label: "Product Offering",
-    href: "#features",
-    ariaLabel: "Product Offering",
-  },
-  {
     label: "Documentation",
     href: "https://docs.arguflow.ai",
     ariaLabel: "Documentation",
