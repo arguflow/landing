@@ -7,6 +7,16 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 const navbarLinks = [
   { label: "Home", href: "#home", ariaLabel: "Home" },
   {
+    label: "Arguflow Search",
+    href: "https://search.arguflow.ai",
+    ariaLabel: "Arguflow Search",
+  },
+  {
+    label: "Arguflow Chat",
+    href: "https://chat.arguflow.ai",
+    ariaLabel: "Arguflow Chat",
+  },
+  {
     label: "Product Offering",
     href: "#features",
     ariaLabel: "Product Offering",
