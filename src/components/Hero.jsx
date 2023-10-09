@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { InvitationModal } from "./InvitationModal";
 
 export const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <section
       className="w-screen flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
@@ -18,7 +16,8 @@ export const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="text-customSecondary px-2 text-sm sm:text-base mb-6 font-bold">
-            AI semantic search & no-hallucination LLM chat infra
+            Build AI powered semantic search and LLM retrieval-augmented
+            generation (RAG) fast
           </div>
         </motion.div>
         <motion.div
@@ -41,16 +40,12 @@ export const Hero = () => {
         >
           <div className="text-customGrayText flex flex-col space-y-4 text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
             <span>
-              Bring your data, we'll handle the rest. We create embeddings for
-              you, store them in a vector db, and coordinate metadata joins with
-              a transactional db.
-            </span>{" "}
+              Let's be honest, really there are only two applications LLM's are
+              good for - vector search and retrieval-augmented generation (RAG).
+            </span>
             <span>
-              Includes <span className="font-semibold"> best in class</span> API
-              for data servicing and white-label UI's for{" "}
-              <span className="font-semibold">semantic/full-text search </span>
-              and <span className="font-semibold">source-cited</span> llm-chat.
-              Bring your models or use our top-ranked single-tenant defaults.
+              You can run both with arbitrary models and data sources in <b></b>
+              <u>merely hours</u> with Arguflow.
             </span>
           </div>
         </motion.div>
@@ -66,12 +61,6 @@ export const Hero = () => {
             >
               Book a Meeting
             </a>
-            <a
-              className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
-              href="https://vault.arguflow.ai/"
-            >
-              Live DebateSum demo
-            </a>
           </div>
         </motion.div>
         <motion.div
@@ -82,7 +71,7 @@ export const Hero = () => {
           <div className="relative w-screen mb-32 flex justify-center mt-16 sm:mt-24 md:mt-28 lg:mt-32">
             <iframe
               className="w-4/5 aspect-video 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-              src="https://www.youtube.com/embed/fcYem3u7Cvo"
+              src="https://www.youtube.com/embed/jX84z2QkfUM?si=vM7MBe5bPEJDMkK0"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -106,9 +95,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      {isModalOpen && (
-        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-      )}
     </section>
   );
 };

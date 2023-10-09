@@ -1,14 +1,7 @@
 import { motion } from "framer-motion";
 
-import { AmazonLogo } from "../assets/logos/AmazonLogo";
-import { DropboxLogo } from "../assets/logos/DropboxLogo";
-import { NetflixLogo } from "../assets/logos/NetflixLogo";
-import { SlackLogo } from "../assets/logos/SlackLogo";
-import { SpotifyLogo } from "../assets/logos/SpotifyLogo";
-import { StripeLogo } from "../assets/logos/StripeLogo";
-
 export const Brands = () => (
-  <section className="py-12 sm:py-24 bg-customDarkBg1 w-full mt-64 mb-16">
+  <section className="py-12 sm:py-24 bg-customDarkBg1 w-full mt-12 mb-16">
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -30,7 +23,7 @@ export const Brands = () => (
           <div className="w-2/3 sm:w-[620px] lg:w-1/2 mx-auto lg:mx-0 lg:pl-10">
             <div className="flex justify-center space-x-6 flex-wrap -m-4">
               <div className="w-64 py-6 flex justify-center">
-                <img src="/capital-factory-logo-light.svg" alt="capital-factory" />
+                <img src="/outlierdb_logo.jpeg" alt="capital-factory" />
               </div>
               <div className="w-64 py-6 flex  justify-center">
                 <img src="/chicago-debate.png" alt="Chicago Debate Society" />

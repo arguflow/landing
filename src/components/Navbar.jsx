@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { ArguflowLogo } from "../assets/logos/ArguflowLogo";
@@ -7,14 +7,9 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 const navbarLinks = [
   { label: "Home", href: "#home", ariaLabel: "Home" },
   {
-    label: "Arguflow Search",
-    href: "https://search.arguflow.ai",
-    ariaLabel: "Arguflow Search",
-  },
-  {
-    label: "Arguflow Chat",
-    href: "https://chat.arguflow.ai",
-    ariaLabel: "Arguflow Chat",
+    label: "Demos",
+    href: "#demos",
+    ariaLabel: "Arguflow Live Demos",
   },
   {
     label: "Documentation",
@@ -26,37 +21,37 @@ const navbarLinks = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [starCount, setStarCount] = useState(0);
+
+  useEffect(() => {
+    const abortController = new AbortController();
+
+    try {
+      void fetch(`https://api.github.com/repos/arguflow/arguflow`, {
+        headers: {
+          Accept: "application/vnd.github+json",
+        },
+        signal: abortController.signal,
+      }).then((response) => {
+        if (!response.ok) {
+          return;
+        }
+        void response.json().then((data) => {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+          setStarCount(data.stargazers_count);
+        });
+      });
+    } catch (e) {
+      console.error(e);
+    }
+
+    return () => {
+      abortController.abort();
+    };
+  });
 
   return (
     <>
-      <div
-        className="card font-semibold py-3"
-        style={{
-          width: "100%",
-          color: "#00f",
-          textAlign: "center",
-          backgroundColor: "#ff0",
-          backgroundImage: "linear-gradient(59deg, #a33eb5 0%, #00dde7 100%)",
-          flex: 1,
-          justifyContent: "center",
-          margin: 0,
-          fontSize: "20px",
-          position: "relative",
-        }}
-      >
-        <div className="p-2" style={{ color: "#fff" }}>
-          Check out{" "}
-          <a
-            className="underline font-bold"
-            href="https://chat.arguflow.ai"
-            style={{ color: "#d3ff19" }}
-          >
-            Chat
-          </a>
-          : a demo of Arguflow's new LLM-chat infrastructure for a debate
-          use-case
-        </div>
-      </div>
       <nav className="w-full max-w-[100vw] h-20 flex flex-col justify-center items-center sticky top-0 bg-customDarkBg1 lg:bg-customDarkBgTransparent z-40 lg:backdrop-blur-xl">
         <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
           <motion.div
@@ -95,32 +90,34 @@ export const Navbar = () => {
               ))}
             </div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            exit={{ opacity: 0 }}
-          >
-            <div className="grow basis-0 justify-end hidden lg:flex items-center">
-              <a
-                className="text-white custom-border-gray rounded-xl
-           bg-customDarkBg2 hover:bg-customDarkBg3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-                href="https://github.com/arguflow"
-                target="_blank"
-                aria-label="Star on GitHub"
-              >
-                <GithubIcon />
-                <span className="pt-px">Star on Github</span>
-              </a>
+          <div class="flex space-x-2">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              exit={{ opacity: 0 }}
+            >
+              <div className="grow basis-0 justify-end flex items-center">
+                <a
+                  className="text-white custom-border-gray rounded-xl
+           bg-customDarkBg2 hover:bg-customDarkBg3  border-gray-700 p-2 text-sm flex gap-x-1 md:gap-x-2 items-center"
+                  href="https://github.com/arguflow"
+                  target="_blank"
+                  aria-label="Star on GitHub"
+                >
+                  <GithubIcon />
+                  <p class="text-sm">STAR US</p> | <p>{starCount}</p>
+                </a>
+              </div>
+            </motion.div>
+            <div
+              className="lg:hidden flex flex-col  px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-customDarkBg2"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
+              <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
+              <div className="w-5 h-0.5 bg-gray-500 "></div>
             </div>
-          </motion.div>
-          <div
-            className="lg:hidden flex flex-col  px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-customDarkBg2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-            <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-            <div className="w-5 h-0.5 bg-gray-500 "></div>
           </div>
         </div>
         {/* Mobile navbar */}
@@ -151,12 +148,12 @@ export const Navbar = () => {
                 <a
                   className="text-white custom-border-gray rounded-xl
            bg-customDarkBg2 hover:bg-customDarkBg3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-                  href="https://github.com/arguflow"
+                  href="https://github.com/arguflow/arguflow"
                   target="_blank"
                   aria-label="Star on GitHub"
                 >
                   <GithubIcon />
-                  Star on Github
+                  <p class="text-sm">STAR US</p>|<p>{starCount}</p>
                 </a>
               </div>
             </motion.div>
