@@ -33,6 +33,18 @@ export const Demos = () => {
                     Enron RAG Chat
                   </a>
                 </li>
+                <li className="mb-4 flex">
+                  <CheckArrowIcon />
+                  <a class="underline" href="https://cve-search.arguflow.ai/">
+                    CVE Security Vulnerabilities Semantic Search
+                  </a>
+                </li>
+                <li className="mb-4 flex">
+                  <CheckArrowIcon />
+                  <a class="underline" href="https://cve-chat.arguflow.ai/">
+                    CVE Security Vulnerabilities Semantic Search
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
