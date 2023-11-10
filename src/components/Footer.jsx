@@ -1,4 +1,3 @@
-import { TelegramIcon } from "../assets/icons/TelegramIcon";
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 import { ArguflowLogo } from "../assets/logos/ArguflowLogo";
 import { TwitterIcon } from "../assets/icons/TwitterIcon";
@@ -57,7 +56,7 @@ export const Footer = () => {
               <div className="w-36 mx-auto">
                 <a
                   className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
+                  href="https://discord.gg/BVk5a97q2R"
                 >
                   <DiscordIcon />
                 </a>
@@ -66,12 +65,6 @@ export const Footer = () => {
                   href="https://twitter.com/arguflow"
                 >
                   <TwitterIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
-                  <TelegramIcon />
                 </a>
               </div>
             </div>
